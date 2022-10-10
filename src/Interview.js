@@ -100,7 +100,7 @@ export default function SelectVariants({ datas }) {
                         <tr key={i}>
                             <td>{char.name}</td>
                             <td>{char.gender}</td>
-                            <td>{char.height}</td>
+                            <td>{char.height}cm</td>
                         </tr>
                     )}
                     {spinner && (
