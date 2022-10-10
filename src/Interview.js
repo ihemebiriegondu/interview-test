@@ -3,7 +3,7 @@ import { useState } from 'react';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
 
 export default function SelectVariants({ datas }) {
 
@@ -14,17 +14,20 @@ export default function SelectVariants({ datas }) {
 
     const movieDatas = datas;
 
-
-    const handleChange = (event: SelectChangeEvent) => {
+    const handleChange = (event) => {
         setMovie(event.target.value);
 
         if (event.target.value === '') {
             document.getElementById("character-table").innerHTML = ''
+            document.getElementById('movie').innerHTML = ''
         } else {
             document.getElementById("character-table").innerHTML = `
                 <th>Name</th>
                 <th>Gender</th>
                 <th>Height</th>
+            `
+            document.getElementById('movie').innerHTML = `
+            <h6>Movie: ${event.target.value}</h6>
             `
         }
 
@@ -79,30 +82,33 @@ export default function SelectVariants({ datas }) {
                         )
                     }
                 </Select>
-
-                <div>
-                    <p className='crawl'>{crawl}</p>
-
-                    <table>
-                        <tr id='character-table'>
-
-                        </tr>
-
-                        {newcharacters && newcharacters.map((char, i) =>
-                            <tr key={i}>
-                                <td>{char.name}</td>
-                                <td>{char.gender}</td>
-                                <td>{char.height}</td>
-                            </tr>
-                        )}
-                        {spinner && (
-                            <p>something is loading</p>
-                        )}
-
-                    </table>
+            </FormControl>
+            <div>
+                <div id='movie'>
 
                 </div>
-            </FormControl>
+
+                <p className='crawl'>{crawl}</p>
+            </div>
+            <div>
+                <table>
+                    <tr id='character-table'>
+
+                    </tr>
+
+                    {newcharacters && newcharacters.map((char, i) =>
+                        <tr key={i}>
+                            <td>{char.name}</td>
+                            <td>{char.gender}</td>
+                            <td>{char.height}</td>
+                        </tr>
+                    )}
+                    {spinner && (
+                        <div class="loader"></div>
+                    )}
+
+                </table>
+            </div>
         </div>
     );
 }
