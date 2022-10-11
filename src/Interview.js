@@ -74,7 +74,7 @@ export default function SelectVariants({ datas }) {
                     id="demo-simple-select-standard"
                     value={Movies}
                     onChange={(event) => { handleChange(event) }}
-                    label="Age"
+                    label="Movies"
                 >
                     {
                         datas.map((data, i) =>
@@ -90,7 +90,13 @@ export default function SelectVariants({ datas }) {
 
                 </div>
 
-                <p className='crawl'>{crawl}</p>
+<p className='crawl'
+    behavior='scroll'
+    direction='left'
+ >
+    {crawl}
+</p>
+          
             </div>
             <div>
                 <table>
