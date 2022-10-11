@@ -24,6 +24,7 @@ export default function SelectVariants({ datas }) {
         if (event.target.value === '') {
             document.getElementById("character-table").innerHTML = ''
             document.getElementById('movie').innerHTML = ''
+            document.getElementById("char").innerHTML = ""
         } else {
             document.getElementById("character-table").innerHTML = `
                 <th>Name</th>
@@ -32,6 +33,9 @@ export default function SelectVariants({ datas }) {
             `
             document.getElementById('movie').innerHTML = `
             <h6>Movie: <span>${event.target.value}</span></h6>
+            `
+            document.getElementById("char").innerHTML = `
+            <h6>Characters: </h6>
             `
         }
 
@@ -96,6 +100,9 @@ export default function SelectVariants({ datas }) {
 
             </div>
             <div>
+                <div id='char'>
+                    
+                </div>
                 <table>
                     <tr id='character-table'>
 
