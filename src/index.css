@@ -19,16 +19,12 @@ code {
   color: yellow !important;
 }
 
-.css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
-  fill: yellow !important;
+.input-field {
   color: yellow !important;
 }
 
-.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
-  color: yellow !important;
-}
-
-.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+.input-field select,
+#demo-simple-select-standard {
   color: yellow !important;
 }
 
@@ -37,12 +33,57 @@ code {
   width: 100% !important;
 }
 
+.input-field select,
+#demo-simple-select-standard {
+  color: yellow !important;
+  width: 100% !important;
+}
+
 .css-a3l6o-MuiInputBase-root-MuiInput-root-MuiSelect-root:before {
+  border-bottom: 1px solid yellow !important;
+}
+
+.input-field select,
+#demo-simple-select-standard {
   border-bottom: 1px solid yellow !important;
 }
 
 .css-a3l6o-MuiInputBase-root-MuiInput-root-MuiSelect-root:after {
   border-bottom: 2px solid yellow !important;
+}
+
+.input-field select,
+#demo-simple-select-standard {
+  border-bottom: 2px solid yellow !important;
+}
+
+.css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon {
+  fill: yellow !important;
+  color: yellow !important;
+}
+
+.input-field svg,
+#demo-simple-select-standard svg {
+  fill: yellow !important;
+  color: yellow !important;
+}
+
+.css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+  color: yellow !important;
+}
+
+.input-field label,
+#demo-simple-select-standard-label {
+  color: yellow !important;
+}
+
+.css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+  color: yellow !important;
+}
+
+.input-field label:focus,
+#demo-simple-select-standard-label:focus {
+  color: yellow !important;
 }
 
 input {
@@ -68,7 +109,7 @@ h6 {
 
 .crawl {
   width: 50% !important;
-  margin: auto; 
+  margin: auto;
   margin-bottom: 5rem;
 }
 
@@ -83,11 +124,14 @@ table th {
   font-size: 18px;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid rgba(255, 255, 0, 0.642);
 }
 
-th, td {
+th,
+td {
   padding-top: 10px;
   padding-bottom: 20px;
   padding-left: 30px;

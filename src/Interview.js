@@ -67,7 +67,7 @@ export default function SelectVariants({ datas }) {
 
     return (
         <div>
-            <FormControl variant="standard" sx={{ m: 1, minWidth: 300 }}>
+            <FormControl variant="standard" className='input-field' sx={{ m: 1, minWidth: 300 }}>
                 <InputLabel id="demo-simple-select-standard-label">Movies</InputLabel>
                 <Select
                     labelId="demo-simple-select-standard-label"
