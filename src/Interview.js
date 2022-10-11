@@ -5,6 +5,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
+import Marquee from "react-fast-marquee";
+
 import './index.css'
 
 export default function SelectVariants({ datas }) {
@@ -29,7 +31,7 @@ export default function SelectVariants({ datas }) {
                 <th>Height</th>
             `
             document.getElementById('movie').innerHTML = `
-            <h6>Movie: ${event.target.value}</h6>
+            <h6>Movie: <span>${event.target.value}</span></h6>
             `
         }
 
@@ -90,13 +92,8 @@ export default function SelectVariants({ datas }) {
 
                 </div>
 
-<p className='crawl'
-    behavior='scroll'
-    direction='left'
- >
-    {crawl}
-</p>
-          
+                <Marquee className='crawl' behavior='scroll' direction='left' speed={20} delay={3} gradient={false}>{crawl}</Marquee>
+
             </div>
             <div>
                 <table>
