@@ -90,12 +90,12 @@ export default function SelectVariants({ datas }) {
 
                 </div>
 
-<marquee className='crawl'
+<p className='crawl'
     behavior='scroll'
     direction='left'
  >
     {crawl}
-</marquee>
+</p>
           
             </div>
             <div>
