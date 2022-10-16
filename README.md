@@ -1,4 +1,4 @@
-app to get all starwar movies and their respective characters with each character information
+app to get all starwar movies from an external api and their respective characters with each character information
 
 
 Live preview: 
